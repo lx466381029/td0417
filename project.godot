@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TD0417"
-run/main_scene="uid://bwqp2lokrj4dm"
+run/main_scene="uid://b4yagvbtd7xft"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

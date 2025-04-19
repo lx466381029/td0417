@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4yagvbtd7xft"]
+[gd_scene load_steps=14 format=3 uid="uid://b4yagvbtd7xft"]
 
 [ext_resource type="Texture2D" uid="uid://d2cxnmk8d0ts4" path="res://Texture2D/Bg.png" id="1_vgkri"]
 [ext_resource type="Texture2D" uid="uid://bcbe6ng4fos77" path="res://Texture2D/Start.png" id="2_ftmri"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c441tfsyv52ht" path="res://Texture2D/Blast.png" id="3_t3hj6"]
 [ext_resource type="Texture2D" uid="uid://de201pvvi3hii" path="res://Texture2D/Pause.png" id="3_y52c1"]
 [ext_resource type="Texture2D" uid="uid://tmtnlgormw3f" path="res://Texture2D/Building_Castle.png" id="4_bkjcf"]
+[ext_resource type="Script" uid="uid://bq847s0lhmxw8" path="res://Script/Cannon.gd" id="5_alkcg"]
 [ext_resource type="Texture2D" uid="uid://dcpf321vckwhw" path="res://Texture2D/Battery.png" id="6_xpfmo"]
 [ext_resource type="Texture2D" uid="uid://c4jl5x8i1r4an" path="res://Texture2D/Title.png" id="8_iow1c"]
 [ext_resource type="FontFile" uid="uid://b4pn6o2ece42m" path="res://Font/Pangolin-Regular.ttf" id="9_01llu"]
@@ -132,11 +133,16 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Cannon" type="Node2D" parent="UIRoot/HUD/Stage"]
+[node name="Cannon" type="Control" parent="UIRoot/HUD/Stage"]
+anchors_preset = 0
+offset_left = 256.0
+offset_top = 96.0
+offset_right = 296.0
+offset_bottom = 136.0
+script = ExtResource("5_alkcg")
 
 [node name="Battery" type="Sprite2D" parent="UIRoot/HUD/Stage/Cannon"]
-position = Vector2(264, 96)
-rotation = 2.61799
+rotation = 0.872665
 scale = Vector2(0.345991, 0.344102)
 texture = ExtResource("6_xpfmo")
 offset = Vector2(72, 8)
