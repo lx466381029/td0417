@@ -1,0 +1,217 @@
+[gd_scene load_steps=13 format=3 uid="uid://b4yagvbtd7xft"]
+
+[ext_resource type="Texture2D" uid="uid://d2cxnmk8d0ts4" path="res://Texture2D/Bg.png" id="1_vgkri"]
+[ext_resource type="Texture2D" uid="uid://bcbe6ng4fos77" path="res://Texture2D/Start.png" id="2_ftmri"]
+[ext_resource type="Texture2D" uid="uid://elpte3srk6dw" path="res://Texture2D/Building_Plot.png" id="2_y52c1"]
+[ext_resource type="Texture2D" uid="uid://7k84naublxle" path="res://Texture2D/Exmpale.png" id="3_g1tjp"]
+[ext_resource type="Texture2D" uid="uid://c441tfsyv52ht" path="res://Texture2D/Blast.png" id="3_t3hj6"]
+[ext_resource type="Texture2D" uid="uid://de201pvvi3hii" path="res://Texture2D/Pause.png" id="3_y52c1"]
+[ext_resource type="Texture2D" uid="uid://tmtnlgormw3f" path="res://Texture2D/Building_Castle.png" id="4_bkjcf"]
+[ext_resource type="Texture2D" uid="uid://dcpf321vckwhw" path="res://Texture2D/Battery.png" id="6_xpfmo"]
+[ext_resource type="Texture2D" uid="uid://c4jl5x8i1r4an" path="res://Texture2D/Title.png" id="8_iow1c"]
+[ext_resource type="FontFile" uid="uid://b4pn6o2ece42m" path="res://Font/Pangolin-Regular.ttf" id="9_01llu"]
+[ext_resource type="Script" uid="uid://dl5cybk54ugdy" path="res://Script/SummonEnemy.gd" id="9_alkcg"]
+[ext_resource type="Texture2D" uid="uid://d28xiktlxmjro" path="res://Texture2D/Coin.png" id="10_iow1c"]
+
+[node name="Main" type="Node"]
+
+[node name="GameManger" type="Node" parent="."]
+
+[node name="GameWorld" type="Node2D" parent="."]
+
+[node name="Map" type="Node2D" parent="GameWorld"]
+
+[node name="Bg" type="Sprite2D" parent="GameWorld/Map"]
+position = Vector2(270, 480)
+scale = Vector2(0.527344, 0.625)
+texture = ExtResource("1_vgkri")
+
+[node name="BuildPoints" type="Node2D" parent="GameWorld"]
+position = Vector2(-973, -1113)
+
+[node name="BuildPoint1" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1145.5, 1453.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint2" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1225.5, 1453.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint3" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1305.5, 1453.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint4" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1145.5, 1541.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint5" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1225.5, 1541.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint6" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1305.5, 1541.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint7" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1049.5, 1621.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint8" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1053, 1737)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+offset = Vector2(0, 0.00012207)
+
+[node name="BuildPoint9" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1433.5, 1621.75)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="BuildPoint10" type="Sprite2D" parent="GameWorld/BuildPoints"]
+position = Vector2(1437, 1737)
+scale = Vector2(0.735294, 0.728571)
+texture = ExtResource("2_y52c1")
+
+[node name="Bumpers" type="Node2D" parent="GameWorld"]
+
+[node name="Bumper1" type="Sprite2D" parent="GameWorld/Bumpers"]
+position = Vector2(168, 248)
+texture = ExtResource("3_t3hj6")
+
+[node name="Bumper2" type="Sprite2D" parent="GameWorld/Bumpers"]
+position = Vector2(328, 248)
+texture = ExtResource("3_t3hj6")
+
+[node name="Bumper3" type="Sprite2D" parent="GameWorld/Bumpers"]
+position = Vector2(27.5, 387.5)
+texture = ExtResource("3_t3hj6")
+
+[node name="Bumper4" type="Sprite2D" parent="GameWorld/Bumpers"]
+position = Vector2(515.5, 387.5)
+texture = ExtResource("3_t3hj6")
+
+[node name="Bumper5" type="Sprite2D" parent="GameWorld/Bumpers"]
+position = Vector2(168, 536)
+texture = ExtResource("3_t3hj6")
+
+[node name="Bumper6" type="Sprite2D" parent="GameWorld/Bumpers"]
+position = Vector2(336, 536)
+texture = ExtResource("3_t3hj6")
+
+[node name="Towers" type="Node2D" parent="GameWorld"]
+
+[node name="Castle" type="Sprite2D" parent="GameWorld/Towers"]
+position = Vector2(272, 742)
+scale = Vector2(0.800752, 0.758065)
+texture = ExtResource("4_bkjcf")
+
+[node name="Enemies" type="Node2D" parent="GameWorld"]
+
+[node name="EnemySpawner" type="Node2D" parent="GameWorld"]
+
+[node name="Effects" type="Node2D" parent="GameWorld"]
+
+[node name="UIRoot" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UIRoot"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Stage" type="Control" parent="UIRoot/HUD"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cannon" type="Node2D" parent="UIRoot/HUD/Stage"]
+
+[node name="Battery" type="Sprite2D" parent="UIRoot/HUD/Stage/Cannon"]
+position = Vector2(264, 96)
+rotation = 2.61799
+scale = Vector2(0.345991, 0.344102)
+texture = ExtResource("6_xpfmo")
+offset = Vector2(72, 8)
+
+[node name="WaveTitle" type="Control" parent="UIRoot/HUD/Stage"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Sprite2D" parent="UIRoot/HUD/Stage/WaveTitle"]
+position = Vector2(256, 80)
+scale = Vector2(0.59375, 0.5)
+texture = ExtResource("8_iow1c")
+
+[node name="Wave" type="Label" parent="UIRoot/HUD/Stage/WaveTitle"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 56.0
+offset_right = 335.0
+offset_bottom = 102.0
+theme_override_fonts/font = ExtResource("9_01llu")
+theme_override_font_sizes/font_size = 36
+text = "Wave 9/10"
+
+[node name="PauseButton" type="Button" parent="UIRoot/HUD/Stage"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 89.0
+offset_bottom = 112.0
+
+[node name="Pause" type="Sprite2D" parent="UIRoot/HUD/Stage/PauseButton"]
+position = Vector2(30.5, 40)
+scale = Vector2(0.300781, 0.375)
+texture = ExtResource("3_y52c1")
+
+[node name="Player" type="Control" parent="UIRoot/HUD"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartButton" type="Button" parent="UIRoot/HUD/Player"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+offset_left = 390.0
+offset_top = 728.0
+offset_right = 874.0
+offset_bottom = 947.0
+scale = Vector2(0.26, 0.313)
+script = ExtResource("9_alkcg")
+
+[node name="Start" type="Sprite2D" parent="UIRoot/HUD/Player/StartButton"]
+position = Vector2(242.535, 109.026)
+scale = Vector2(1.01714, 1.05613)
+texture = ExtResource("2_ftmri")
+
+[node name="Gold" type="Control" parent="UIRoot/HUD/Player"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Coin" type="Sprite2D" parent="UIRoot/HUD/Player"]
+position = Vector2(47.3002, 750.134)
+rotation = 0.261799
+scale = Vector2(1.32963, 1.32424)
+texture = ExtResource("10_iow1c")
+
+[node name="Exmpale" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.25098)
+position = Vector2(-0.000184031, 0)
+scale = Vector2(0.527294, 0.625)
+texture = ExtResource("3_g1tjp")
+offset = Vector2(512.097, 768)
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="UIRoot/HUD/Player/StartButton" to="UIRoot/HUD/Player/StartButton" method="_on_pressed"]
